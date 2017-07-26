@@ -1,0 +1,25 @@
+<div class="comments-container">
+  <div class="icon-container">
+    <i class="icon heart"></i>
+    <i class="icon comment"></i>
+  </div>
+
+  <div class="like-container">
+    <p class="like-count">
+      {props.likeCount}
+    </p>
+  </div>
+
+  <div class="user-comment-container">
+    <div class="comment">
+      <p><span class="username">{props.username}</span>{props.comment}</p>
+    </div>
+  </div>
+
+
+  <div class="add-comment-text-container">
+    <form action="/comments" method="POST">
+      <input type="text" placeholder="Add a acomment dipshit" />
+    </form>
+  </div>
+</div>

@@ -15,16 +15,17 @@ class App extends Component {
 
 
 
-
-
   render() {
     return (
       <div className="app-container">
         <SearchBar />
-        <PostListComponent posts={postData} />
-        {postData.map((data, i) => {
-          return <li><PostContainer postData={data} /></li>
-        })}
+        <div className="posts-container">
+          {postData.map((data, i) => {
+            return (
+              <PostContainer postData={data} />
+            )
+          })}
+          </div>
       </div>
     );
   }

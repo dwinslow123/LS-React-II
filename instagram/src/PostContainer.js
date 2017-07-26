@@ -9,13 +9,19 @@ class PostContainer extends Component {
 
   render() {
     return (
-      <div>
-        <div> {this.props.postData.username}</div>
-        <div> <img src={this.props.postData.thumbnailUrl}/></div>
-        <div> <img src={this.props.postData.imageUrl}/></div>
-        <div className="likes"><img src='http://www.pngall.com/wp-content/uploads/2016/04/Instagram-Heart-PNG-Clipart.png'/>{this.props.postData.likes}</div>
-        <div> {this.props.postData.timestamp}</div>
-        <CommentSection comments={this.props.postData.comments} />
+      <div className="post">
+        <div className="profile-container">
+          <div> {this.props.postData.username}</div>
+          <div> <img src={this.props.postData.thumbnailUrl}/></div>
+        </div>
+
+        <div className="post-container">
+          <div> <img src={this.props.postData.imageUrl}/></div>
+          <div className="likes"><img src='http://www.pngall.com/wp-content/uploads/2016/04/Instagram-Heart-Transparent.png'/>{this.props.postData.likes}</div>
+          <div className="comment-bubble"><img src='http://www.haotu.net/up/3923/256/3-Circular-speech-bubble-outline.png'/></div>
+          <div> {this.props.postData.timestamp}</div>
+          <CommentSection comments={this.props.postData.comments} />
+        </div>
       </div>
     );
   }
