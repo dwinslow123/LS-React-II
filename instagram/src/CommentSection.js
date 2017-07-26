@@ -32,20 +32,18 @@ class CommentSection extends Component {
  render() {
   return (
     <div>
-    <input className="addComment" onSubmit={this.addComment}
-       onChange={this.updateNewComment}
-       placeholder="New list item"
-       value = {this.state.newComment}
-    />
-    <div>
     <ul>
       {this.state.comments.map((comment, i) => {
         return (
-          <li><p>{comment.username}</p><p>{comment.text}</p></li>
+          <li><strong><p>{comment.username}</p></strong><p>{comment.text}</p></li>
           )
       })}
     </ul>
-    </div>
+    <input className="addComment" onSubmit={this.addComment}
+       onChange={this.updateNewComment}
+       placeholder="Add a comment..."
+       value = {this.state.newComment}
+    />
     </div>
   )
  }
